@@ -1,0 +1,19 @@
+num1 = 5;
+box = 3;
+slovo = 1;
+sred = 17;
+d = LinkedList;
+d.push(6);
+d.push(12);
+d.push(23);
+d.push(40);
+
+while (num1 < box)
+{
+if (sred > 1)
+{ Sred = sred/7;
+box = box+29;
+}
+}
+PolovinaSred = sred/2;
+d.remove(0);

@@ -1,0 +1,12 @@
+lang -> expr+
+expr -> НАЗНАЧИТЬ_ВЫРАЖЕНИЕ | if_expr | while_expr
+НАЗНАЧИТЬ_ВЫРАЖЕНИЕ -> ПЕРЕМЕННАЯ ОПЕРАЦИЯ_ПРИСВАИВАНИЯ (math_expr | СТРОКА) КОНЕЦ
+value -> INT | СТРОКА | ПЕРЕМЕННАЯ
+
+while_expr -> math_logic ФИГУР_ЛВ expr ФИГУР_ПР
+if_expr -> math_logic ФИГУР_ЛВ expr ФИГУР_ПР
+ИНАЧЕ -> ФИГУР_ЛВ expr ФИГУР_ПР
+
+math_logic -> value (ЛОГИЧЕСКАЯ_ОПЕРАЦИЯ (logical_expr | math_expr))*
+math_expr -> (value | math_expr_wbr)(OP math_expr)*
+math_expr_wbr -> LP math_expr RP
